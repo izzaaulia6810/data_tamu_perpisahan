@@ -17,7 +17,14 @@ $item = mysqli_fetch_array($data);
     <h1>Ubah data</h1>
     <form method="post">
         nama <input type="text" name="nama" value="<?= $item['nama']; ?>"><br><br>
-        keterangan <input type="text" name="ket" value="<?= $item['keterangan']; ?>"><br><br>
+        keterangan 
+        <select name="keterangan">
+        <option value="">Pilih kelompok</option>
+        <option value="orang_tua">Orang tua</option>
+        <option value="guru">Guru</option>
+        <option value="siswa">Siswa</option>
+        <option value="tamu_kusus">Tamu kusus</option>
+    </select><br><br>
         jam kehadiran <input type="text" name="jam" value="<?= $item['jam_kehadiran']; ?>"><br><br>
 
         <button type="submit" name="update">Simpan</button>
@@ -28,7 +35,7 @@ $item = mysqli_fetch_array($data);
 if(isset($_POST['update'])) {
     mysqli_query($conn, "UPDATE tamu_ps SET
     nama='$_POST[nama]',
-    keterangan='$_POST[ket]',
+    keterangan='$_POST[keterangan]',
     jam_kehadiran='$_POST[jam]'
     WHERE id='$id'
     ");
