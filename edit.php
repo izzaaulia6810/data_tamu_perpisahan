@@ -11,6 +11,7 @@ $item = mysqli_fetch_array($data);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit data</title>
+    <link rel="stylesheet" href="styleEdit.css">
 </head>
 <body>
     <h1>Ubah data</h1>
