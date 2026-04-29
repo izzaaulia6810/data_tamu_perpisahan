@@ -11,11 +11,11 @@ $item = mysqli_fetch_array($data);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit data</title>
-    <link rel="stylesheet" href="styleEdit.css">
+    <link rel="stylesheet" href="edit.css">
 </head>
 <body>
-    <h1>Ubah data</h1>
     <form method="post">
+        <h1>Ubah data</h1>
         nama <input type="text" name="nama" value="<?= $item['nama']; ?>"><br><br>
         keterangan 
         <select name="keterangan">
